@@ -4,13 +4,13 @@ class Timer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { time: 0, x: 0, y: 0, started: false };
-    this.timeInterval = null;
+    this.timerInterval = null;
   }
 
   keyListener = (evt) => {
     if(this.state.started) {
       if(evt.keyCode === 37) {
-        this.setState({ x: this.state.x - 5});
+        this.setState({ x: this.state.x - 5 });
       } else if(evt.keyCode === 38) {
         this.setState({ y: this.state.y - 5});
       } else if(evt.keyCode === 39) {
